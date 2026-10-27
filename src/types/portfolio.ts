@@ -15,11 +15,14 @@ export interface SkillGroup {
 }
 
 export interface Experience {
-  organization: string;
-  // Add verified roles, dates, and responsibilities when provided.
-  role?: string;
-  period?: string;
+  organization?: string;
+  role: string;
+  period: string;
+  location?: string;
+  arrangement?: "Remote" | "Hybrid" | "On-site";
+  note?: string;
   responsibilities?: readonly string[];
+  technologies?: readonly string[];
 }
 
 export interface Project {
