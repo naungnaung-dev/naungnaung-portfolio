@@ -27,12 +27,17 @@
 }
 
 @layer base {
+  html { scroll-padding-top: 6rem; }
+  section[id] { scroll-margin-top: 1rem; }
+
   body {
     background: var(--surface);
     color: var(--foreground);
     font-family: var(--font-sans);
     line-height: 1.6;
   }
+
+  a[aria-disabled="true"] { cursor: not-allowed; }
 
   a, button { -webkit-tap-highlight-color: transparent; }
   :focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
@@ -43,6 +48,11 @@
   .site-container { width: 100%; max-width: var(--content-width); margin-inline: auto; padding-inline: clamp(1.25rem, 4vw, 3rem); }
   .nav-link { display: inline-flex; min-height: 2.75rem; align-items: center; padding-inline: 0.75rem; border-radius: 0.5rem; }
   .nav-link:hover { background: var(--surface); color: var(--accent); }
+  .button-primary, .button-secondary { display: inline-flex; min-height: 3rem; align-items: center; justify-content: center; gap: 0.5rem; border-radius: 0.5rem; padding: 0.75rem 1.25rem; font-size: 0.875rem; font-weight: 600; transition: background-color 150ms, border-color 150ms, color 150ms; }
+  .button-primary { background: var(--accent); color: white; }
+  .button-primary:hover { background: var(--accent-hover); }
+  .button-secondary { border: 1px solid var(--border); background: var(--background); color: var(--heading); }
+  .button-secondary:hover { border-color: var(--accent); color: var(--accent); background: var(--surface); }
   .skip-link { position: absolute; left: 1rem; top: 1rem; z-index: 50; transform: translateY(-200%); border-radius: 0.5rem; background: var(--heading); color: white; padding: 0.75rem 1rem; }
   .skip-link:focus { transform: translateY(0); }
 }
