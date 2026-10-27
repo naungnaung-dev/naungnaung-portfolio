@@ -1,11 +1,9 @@
-// These anchor IDs are also the contract for upcoming homepage sections.
-// Set available to true when each corresponding section is implemented.
+// Shared homepage anchors for desktop and mobile navigation.
 export const navigation = [
-  { label: "Home", href: "/#home", available: true },
-  { label: "About", href: "/#about", available: true },
-  { label: "Skills", href: "/#skills", available: true },
-  { label: "Experience", href: "/#experience", available: true },
-  { label: "Projects", href: "/#projects", available: true },
-  { label: "Education", href: "/#education", available: true },
-  { label: "Contact", href: "/#contact", available: true },
+  { label: "About", href: "/#about" },
+  { label: "Skills", href: "/#skills" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Education", href: "/#education" },
+  { label: "Contact", href: "/#contact" },
 ] as const;

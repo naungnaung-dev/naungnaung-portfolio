@@ -3,7 +3,7 @@ import { education } from "@/data/education";
 export function Education() {
   return (
     <section id="education" aria-labelledby="education-heading" className="border-t border-border bg-surface">
-      <div className="site-container py-12 sm:py-24 lg:py-28">
+      <div className="site-container py-12 sm:py-16 lg:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.12em] text-accent">Academic background</p>
         <h2 id="education-heading" className="mt-3 text-3xl font-semibold tracking-tight text-heading sm:text-4xl">Education</h2>
         <div className="mt-8 rounded-xl border border-border bg-background p-5 sm:mt-10 sm:p-8">

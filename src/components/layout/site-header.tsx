@@ -1,7 +1,6 @@
-import { SectionLink } from "@/components/navigation/section-link";
 import Link from "next/link";
 import { ArrowDown } from "lucide-react";
-import { profile } from "@/data/profile";
+import { PersonalLogo } from "@/components/branding/personal-logo";
 import { navigation } from "@/data/navigation";
 import { MobileNavigation } from "@/components/layout/mobile-navigation";
 
@@ -9,13 +8,11 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur-sm">
       <div className="site-container flex min-h-20 items-center justify-between gap-5">
-        <Link href="/#home" aria-label={`${profile.name} — Home`} className="shrink-0 text-lg font-semibold tracking-tight text-heading">
-          {profile.name}<span className="text-accent" aria-hidden="true">.</span>
-        </Link>
+        <PersonalLogo />
         <nav aria-label="Primary" className="hidden lg:block">
           <ul className="flex items-center gap-0.5 text-sm font-medium">
             {navigation.map((item) => (
-              <li key={item.href}><SectionLink className="nav-link" href={item.href} available={item.available}>{item.label}</SectionLink></li>
+              <li key={item.href}><Link className="nav-link" href={item.href}>{item.label}</Link></li>
             ))}
           </ul>
         </nav>

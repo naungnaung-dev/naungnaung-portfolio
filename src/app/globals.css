@@ -23,7 +23,7 @@
   --color-accent-hover: var(--accent-hover);
   --color-border: var(--border);
   --font-sans: var(--font-geist-sans), Arial, Helvetica, sans-serif;
-  --font-mono: var(--font-geist-mono), monospace;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 @layer base {
@@ -36,8 +36,6 @@
     font-family: var(--font-sans);
     line-height: 1.6;
   }
-
-  a[aria-disabled="true"] { cursor: not-allowed; }
 
   a, button { -webkit-tap-highlight-color: transparent; }
   :focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }

@@ -5,7 +5,7 @@ import { profile } from "@/data/profile";
 export function Contact() {
   return (
     <section id="contact" aria-labelledby="contact-heading" className="border-t border-border bg-background">
-      <div className="site-container grid gap-8 py-12 sm:py-24 lg:grid-cols-[1.6fr_1fr] lg:gap-12 lg:py-28">
+      <div className="site-container grid gap-8 py-12 sm:py-16 lg:grid-cols-[1.6fr_1fr] lg:gap-12 lg:py-20">
         <div className="min-w-0">
           <p className="text-xs font-semibold uppercase tracking-[0.12em] text-accent">Contact</p>
           <h2 id="contact-heading" className="mt-3 text-3xl font-semibold tracking-tight text-heading sm:text-4xl">{contact.heading}</h2>

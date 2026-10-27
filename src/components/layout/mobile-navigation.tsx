@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
-import { SectionLink } from "@/components/navigation/section-link";
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { navigation } from "@/data/navigation";
 
@@ -49,11 +49,11 @@ export function MobileNavigation() {
         <ul className="site-container grid gap-1">
           {navigation.map((item) => (
             <li key={item.href}>
-              <SectionLink href={item.href} available={item.available} onNavigate={close} className="nav-link w-full text-sm font-medium">{item.label}</SectionLink>
+              <Link href={item.href} onClick={close} className="nav-link w-full text-sm font-medium">{item.label}</Link>
             </li>
           ))}
           <li className="mt-3">
-            <SectionLink href="/#contact" available={true} className="button-primary w-full" onNavigate={close}>Let&apos;s Connect</SectionLink>
+            <Link href="/#contact" className="button-primary w-full" onClick={close}>Let&apos;s Connect</Link>
           </li>
         </ul>
       </nav>
