@@ -31,11 +31,11 @@ export const experience = [
     technologies: ["React", "Next.js", "Swagger"],
   },
   {
-    role: "Freelance Web Developer / Independent Learning",
+    role: "Independent Web Developer",
     period: "September 2024 – July 2025",
     location: "Bangkok, Thailand",
     arrangement: "Remote",
-    note: "Independent learning and portfolio projects; this entry does not represent verified paid client work.",
+    note: "Focused on independent web development projects, technical upskilling, and UI/UX practice using React, Tailwind CSS, Node.js, MongoDB, and Figma.",
     responsibilities: [
       "Developed personal and practice projects using React and Tailwind CSS.",
       "Explored backend development using Node.js and MongoDB.",

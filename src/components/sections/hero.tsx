@@ -22,10 +22,9 @@ export function Hero() {
           <p>With {profile.experience} of professional experience, I enjoy turning ideas into reliable, real-world software solutions.</p>
         </div>
         <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-          <SectionLink href={projectsLink.href} available={projectsLink.available} aria-describedby="projects-availability" className="button-primary">View My Work <ArrowDown size={17} aria-hidden="true" /></SectionLink>
+          <SectionLink href={projectsLink.href} available={projectsLink.available} className="button-primary">View My Work <ArrowDown size={17} aria-hidden="true" /></SectionLink>
           <a href={profile.links.linkedin} className="button-secondary">Let&apos;s Connect <ArrowUpRight size={17} aria-hidden="true" /></a>
         </div>
-        {!projectsLink.available && <p id="projects-availability" className="mt-3 text-xs text-muted">Project details are coming soon.</p>}
         <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium text-muted">
           <span className="text-xs font-normal">Find me on</span>
           <a href={profile.links.github} className="inline-flex min-h-11 items-center gap-1.5 hover:text-accent">GitHub <ArrowUpRight size={14} aria-hidden="true" /></a>

@@ -26,6 +26,9 @@ export interface Experience {
 }
 
 export interface Project {
+  category: string;
+  features: readonly string[];
+  contributions: readonly string[];
   slug: string;
   name: string;
   role: string;

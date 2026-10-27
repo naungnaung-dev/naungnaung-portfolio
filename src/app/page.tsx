@@ -1,3 +1,4 @@
+import { FeaturedProjects } from "@/components/sections/featured-projects";
 import { Experience } from "@/components/sections/experience";
 import { About } from "@/components/sections/about";
 import { Skills } from "@/components/sections/skills";
@@ -10,6 +11,7 @@ export default function Home() {
       <About />
       <Skills />
       <Experience />
+      <FeaturedProjects />
     </main>
   );
 }

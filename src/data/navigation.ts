@@ -5,7 +5,7 @@ export const navigation = [
   { label: "About", href: "/#about", available: true },
   { label: "Skills", href: "/#skills", available: true },
   { label: "Experience", href: "/#experience", available: true },
-  { label: "Projects", href: "/#projects", available: false },
+  { label: "Projects", href: "/#projects", available: true },
   { label: "Education", href: "/#education", available: false },
   { label: "Contact", href: "/#contact", available: false },
 ] as const;
