@@ -2,8 +2,8 @@
 // Set available to true when each corresponding section is implemented.
 export const navigation = [
   { label: "Home", href: "/#home", available: true },
-  { label: "About", href: "/#about", available: false },
-  { label: "Skills", href: "/#skills", available: false },
+  { label: "About", href: "/#about", available: true },
+  { label: "Skills", href: "/#skills", available: true },
   { label: "Experience", href: "/#experience", available: false },
   { label: "Projects", href: "/#projects", available: false },
   { label: "Education", href: "/#education", available: false },
