@@ -1,3 +1,5 @@
+import { Education } from "@/components/sections/education";
+import { Contact } from "@/components/sections/contact";
 import { FeaturedProjects } from "@/components/sections/featured-projects";
 import { Experience } from "@/components/sections/experience";
 import { About } from "@/components/sections/about";
@@ -12,6 +14,8 @@ export default function Home() {
       <Skills />
       <Experience />
       <FeaturedProjects />
+      <Education />
+      <Contact />
     </main>
   );
 }

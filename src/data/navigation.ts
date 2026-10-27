@@ -6,6 +6,6 @@ export const navigation = [
   { label: "Skills", href: "/#skills", available: true },
   { label: "Experience", href: "/#experience", available: true },
   { label: "Projects", href: "/#projects", available: true },
-  { label: "Education", href: "/#education", available: false },
-  { label: "Contact", href: "/#contact", available: false },
+  { label: "Education", href: "/#education", available: true },
+  { label: "Contact", href: "/#contact", available: true },
 ] as const;

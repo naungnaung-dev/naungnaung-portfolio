@@ -39,3 +39,19 @@ export interface Project {
   technologies: readonly string[];
   featured: boolean;
 }
+
+export interface Education {
+  degree: string;
+  university: string;
+  field: string;
+  period: string;
+  activities: readonly { name: string; location: string; year: number }[];
+}
+
+export interface Contact {
+  heading: string;
+  introduction: readonly string[];
+  links: readonly { label: string; href: string }[];
+  // Add only after a professional email address has been verified.
+  email?: string;
+}

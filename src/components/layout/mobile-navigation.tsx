@@ -4,7 +4,6 @@ import { useEffect, useId, useRef, useState } from "react";
 import { SectionLink } from "@/components/navigation/section-link";
 import { Menu, X } from "lucide-react";
 import { navigation } from "@/data/navigation";
-import { profile } from "@/data/profile";
 
 export function MobileNavigation() {
   const [open, setOpen] = useState(false);
@@ -54,7 +53,7 @@ export function MobileNavigation() {
             </li>
           ))}
           <li className="mt-3">
-            <a href={profile.links.linkedin} className="button-primary w-full" onClick={close}>Let&apos;s Connect</a>
+            <SectionLink href="/#contact" available={true} className="button-primary w-full" onNavigate={close}>Let&apos;s Connect</SectionLink>
           </li>
         </ul>
       </nav>

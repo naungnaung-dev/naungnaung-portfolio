@@ -1,6 +1,6 @@
 import { SectionLink } from "@/components/navigation/section-link";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { profile } from "@/data/profile";
 import { navigation } from "@/data/navigation";
 import { MobileNavigation } from "@/components/layout/mobile-navigation";
@@ -19,9 +19,9 @@ export function SiteHeader() {
             ))}
           </ul>
         </nav>
-        <a href={profile.links.linkedin} className="button-primary hidden shrink-0 lg:inline-flex">
-          Let&apos;s Connect <ArrowUpRight size={16} aria-hidden="true" />
-        </a>
+        <Link href="/#contact" className="button-primary hidden shrink-0 lg:inline-flex">
+          Let&apos;s Connect <ArrowDown size={16} aria-hidden="true" />
+        </Link>
         <MobileNavigation />
       </div>
     </header>
