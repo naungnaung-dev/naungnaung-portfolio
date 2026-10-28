@@ -26,6 +26,7 @@ export interface Experience {
 }
 
 export interface Project {
+  caseStudyPath?: string;
   category: string;
   features: readonly string[];
   contributions: readonly string[];

@@ -1,4 +1,5 @@
-import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import type { Project } from "@/types/portfolio";
 
 export function ProjectCard({ project }: { project: Project }) {
@@ -12,7 +13,13 @@ export function ProjectCard({ project }: { project: Project }) {
           <h3 id={headingId} className="mt-3 text-3xl font-semibold tracking-tight text-heading sm:text-4xl">{project.name}</h3>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted">{project.description}</p>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <a href={project.website} target="_blank" rel="noopener noreferrer" className="button-primary">
+            {project.caseStudyPath && (
+              <Link href={project.caseStudyPath} className="button-primary">
+                View Case Study <ArrowRight size={17} aria-hidden="true" />
+                <span className="sr-only"> for {project.name}</span>
+              </Link>
+            )}
+            <a href={project.website} target="_blank" rel="noopener noreferrer" className={project.caseStudyPath ? "button-secondary" : "button-primary"}>
               Live Website <ArrowUpRight size={17} aria-hidden="true" />
               <span className="sr-only"> for {project.name} (opens in a new tab)</span>
             </a>

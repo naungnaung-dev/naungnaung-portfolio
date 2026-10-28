@@ -82,7 +82,7 @@ export default function AskOnceCaseStudyPage() {
           <div className="site-container py-10 sm:py-14 lg:py-16">
             <h2 id="product-screenshots-heading" className="text-2xl font-semibold tracking-tight text-heading">{study.sections.screenshots.title}</h2>
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted">
-              Public demo captures follow the customer journey from browsing to checkout. These desktop views document the visible interface; mobile behavior is not demonstrated by these captures. Full-size images are available for closer inspection on smaller screens.
+              These public demo captures show browsing, product selection, cart review, and the checkout form on desktop. Open any image at full size for closer inspection on smaller screens.
             </p>
             <div className="mt-7 sm:mt-8"><ScreenshotGallery screenshots={askOnceScreenshots} /></div>
           </div>

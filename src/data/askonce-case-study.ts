@@ -69,10 +69,10 @@ export const askOnceCaseStudy = {
     { title: "Quality & delivery", description: "Testing, debugging, deployment preparation, and ongoing maintenance." },
   ],
   decisions: [
-    { title: "Modeling variations and stock", description: "Products with different colors, sizes, or available options require a clear relationship between product information, variations, and stock. The data model needs to support both administrative updates and customer selection; a specific schema strategy is not asserted here." },
-    { title: "Separating public and administrative workflows", description: "Buyers need a focused browsing and ordering experience, while administrative users need management tools. Organizing these responsibilities is an architectural consideration; route boundaries and component-sharing decisions are not specified here." },
-    { title: "Managing permissions", description: "Authentication establishes access, while role-based authorization governs administrative capabilities. Keeping permission requirements clear across interfaces and APIs is a key engineering concern; this case study does not claim a particular enforcement mechanism or security guarantee." },
-    { title: "Keeping mobile ordering clear", description: "Product options, stock information, cart state, and order-submission steps need to remain understandable on smaller screens. This is a usability consideration for continued iteration, without a claimed benchmark or measured conversion outcome." },
+    { title: "Modeling variations and stock", description: "Products with different colors, sizes, or available options require a clear relationship between product information, variations, and stock. The data model needs to support both administrative updates and customer selection." },
+    { title: "Separating public and administrative workflows", description: "Buyers need a focused browsing and ordering experience, while administrative users need management tools. Route boundaries and component sharing are considerations when organizing these responsibilities." },
+    { title: "Managing permissions", description: "Authentication establishes access, while role-based authorization governs administrative capabilities. Keeping permission requirements clear across interfaces and APIs is a key engineering concern." },
+    { title: "Keeping mobile ordering clear", description: "Product options, stock information, cart state, and order-submission steps need to remain understandable on smaller screens. Clarity between product selection, cart review, and order submission is a usability consideration for continued iteration." },
   ],
   status: [
     "AskOnce is an independent software product in ongoing development, with work beginning in April 2026.",
