@@ -15,6 +15,7 @@ export const askOnceCaseStudy = {
     overview: { id: "overview", title: "Project Overview" },
     problem: { id: "problem", title: "The Problem" },
     solution: { id: "solution", title: "The Solution" },
+    screenshots: { id: "product-screenshots", title: "Product Screenshots" },
     features: { id: "features", title: "Key Features" },
     stack: { id: "technology-stack", title: "Technology Stack" },
     architecture: { id: "architecture", title: "High-Level Architecture" },

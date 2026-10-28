@@ -4,6 +4,8 @@ import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { CaseStudySection } from "@/components/case-study/case-study-section";
 import { askOnceCaseStudy as study } from "@/data/askonce-case-study";
 import { profile } from "@/data/profile";
+import { askOnceScreenshots } from "@/data/askonce-screenshots";
+import { ScreenshotGallery } from "@/components/case-study/screenshot-gallery";
 
 export const metadata: Metadata = {
   title: study.title,
@@ -76,6 +78,15 @@ export default function AskOnceCaseStudyPage() {
         <CaseStudySection section={study.sections.solution}>
           <p>{study.solution}</p>
         </CaseStudySection>
+        <section id={study.sections.screenshots.id} aria-labelledby="product-screenshots-heading" className="border-t border-border bg-surface">
+          <div className="site-container py-10 sm:py-14 lg:py-16">
+            <h2 id="product-screenshots-heading" className="text-2xl font-semibold tracking-tight text-heading">{study.sections.screenshots.title}</h2>
+            <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted">
+              Public demo captures follow the customer journey from browsing to checkout. These desktop views document the visible interface; mobile behavior is not demonstrated by these captures. Full-size images are available for closer inspection on smaller screens.
+            </p>
+            <div className="mt-7 sm:mt-8"><ScreenshotGallery screenshots={askOnceScreenshots} /></div>
+          </div>
+        </section>
         <CaseStudySection section={study.sections.features}>
           <ul className="space-y-5">
             {study.features.map((feature) => (
