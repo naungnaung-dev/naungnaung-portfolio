@@ -1,8 +1,9 @@
 import Link from "next/link";
 import portrait from "../../../public/naung-naung.jpeg";
 import { ProfilePortrait } from "@/components/hero/profile-portrait";
-import { ArrowDown, ArrowUpRight, Code2, MapPin } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Code2, Download, MapPin } from "lucide-react";
 import { profile } from "@/data/profile";
+import { resumeDownload } from "@/data/resume-download";
 
 export function Hero() {
   return (
@@ -23,8 +24,11 @@ export function Hero() {
               <p>I build modern, scalable, and user-friendly web applications using React, Next.js, Node.js, and Laravel.</p>
               <p>With {profile.experience} of professional experience, I enjoy turning ideas into reliable, real-world software solutions.</p>
             </div>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link href="/#projects" className="button-primary">View My Work <ArrowDown size={17} aria-hidden="true" /></Link>
+              <a href={resumeDownload.href} download={resumeDownload.filename} className="button-secondary">
+                Download Resume <Download size={17} aria-hidden="true" />
+              </a>
               <a href={profile.links.linkedin} className="button-secondary">Let&apos;s Connect <ArrowUpRight size={17} aria-hidden="true" /></a>
             </div>
             <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium text-muted">

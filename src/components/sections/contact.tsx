@@ -1,6 +1,7 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Download } from "lucide-react";
 import { contact } from "@/data/contact";
 import { profile } from "@/data/profile";
+import { resumeDownload } from "@/data/resume-download";
 
 export function Contact() {
   return (
@@ -19,6 +20,9 @@ export function Contact() {
                 <span className="sr-only"> (opens in a new tab)</span>
               </a>
             ))}
+            <a href={resumeDownload.href} download={resumeDownload.filename} className="button-secondary">
+              Download Resume <Download size={17} aria-hidden="true" />
+            </a>
           </div>
         </div>
         <div className="min-w-0 self-start rounded-xl border border-border bg-surface p-5 sm:p-7">
