@@ -1,17 +1,37 @@
-# Naung Naung — Portfolio
+# Naung Naung Portfolio
 
-A professional portfolio built with Next.js App Router, React, TypeScript,
-Tailwind CSS, and Lucide React. The homepage includes Hero, About, Skills,
-Experience, Featured Projects, Education, and Contact sections.
+A professional portfolio for Naung Naung, a Full-Stack Developer with 5+ years
+of experience. It presents verified professional experience, technical skills,
+education, selected work, and contact options for recruiters and engineering
+teams.
 
-## Development
+## Technology stack
+
+- Next.js 16 App Router
+- React and TypeScript
+- Tailwind CSS
+- Lucide React
+- Vercel as the intended deployment platform
+
+## Implemented content
+
+The homepage includes Hero, About, Technical Skills, Professional Experience,
+Featured Projects, Education, Contact, and Footer sections. AskOnce has a
+technical case study at `/projects/askonce` with authentic public-demo
+screenshots.
+
+The approved two-page resume is stored at
+`public/Naung_Naung_Full_Stack_Developer_Resume.pdf`. Download actions are
+available in the Hero and Contact sections.
+
+## Local development
 
 ```sh
-npm install
+npm ci
 npm run dev
 ```
 
-## Verification
+## Quality assurance
 
 ```sh
 npm run typecheck
@@ -19,30 +39,38 @@ npm run lint
 npm run build
 ```
 
-The Geist font uses `next/font/google` and requires network access during the
-first production build. It is self-hosted by Next.js in the built output.
-See [the homepage QA report](docs/homepage-qa.md) for results and the outstanding
-manual browser checklist.
+The Geist font uses `next/font/google`, so a clean production build requires
+network access before Next.js emits the self-hosted font files. See
+[`docs/production-readiness-audit.md`](docs/production-readiness-audit.md) and
+[`docs/final-portfolio-qa.md`](docs/final-portfolio-qa.md) for production and
+manual-browser verification status.
 
-## Source structure
+## Resume regeneration
 
-- `src/app/`: routes, root layout, metadata, and global design tokens.
-- `src/components/layout/`: shared header, mobile navigation, and footer.
-- `src/components/sections/`: homepage section components.
-- `src/components/projects/`: reusable project presentation.
-- `src/data/`: typed profile, skills, employment, and project content.
-- `src/types/portfolio.ts`: shared content contracts.
+Resume content is maintained in `src/data/resume.ts`. To regenerate the PDF:
 
-Components are Server Components by default. Global tokens define the light
-palette, fonts, and content width; Tailwind handles spacing and responsive layout.
-The homepage includes a skip link, visible keyboard focus, and reduced-motion support.
+```sh
+python3 -m pip install -r scripts/requirements-resume.txt
+python3 scripts/generate-resume-pdf.py
+```
 
-## Content and next phase
+Regeneration should be followed by visual inspection of both A4 pages and PDF
+text/link verification before replacing the approved public file.
 
-Only supplied information is included. Project case studies and a downloadable
-resume are deferred to later phases. No email address or portfolio domain has
-been assumed; add canonical metadata when the domain is known. The contact data
-type supports an optional verified email for a future update.
+## Project structure
 
-No authentication, database, CMS, or deployment is configured. AskOnce is represented
-only as portfolio data; its application files are outside this project's scope.
+- `src/app/`: routes, metadata, and global styles
+- `src/components/`: shared layout, sections, project, and case-study UI
+- `src/data/`: typed professional and project content
+- `src/types/`: shared TypeScript contracts
+- `public/`: portrait, AskOnce screenshots, favicon, and resume PDF
+- `scripts/`: maintainable resume export and PDF generation
+- `docs/`: quality-assurance and production-readiness reports
+
+## Deployment status
+
+The project is prepared for deployment to a new, separate Vercel portfolio
+project, but it is not yet publicly deployed. The production domain, canonical
+URLs, sitemap, robots metadata, and social-preview images will be configured
+after the final production URL is confirmed. This repository is separate from
+the AskOnce application and its Vercel projects.

@@ -10,7 +10,7 @@ export const askOnceCaseStudy = {
   description:
     "A technical case study of AskOnce: product planning, full-stack development, data modeling, access control, and a mobile-responsive ordering experience.",
   introduction:
-    "Building a managed selling experience for social media sellers, spanning public storefronts, ordering, and administrative workflows.",
+    "Building a managed product storefront and ordering service for social media sellers, spanning public browsing, ordering, and administrative workflows.",
   sections: {
     overview: { id: "overview", title: "Project Overview" },
     problem: { id: "problem", title: "The Problem" },
@@ -25,7 +25,7 @@ export const askOnceCaseStudy = {
     links: { id: "project-links", title: "Explore the Project" },
   },
   overview: [
-    "AskOnce is a managed web-based selling solution for social media sellers, initially focused on Myanmar businesses selling through Facebook and similar platforms.",
+    "AskOnce is a managed web-based product storefront and ordering service for social media sellers, initially focused on Myanmar businesses selling through Facebook and similar platforms.",
     "Sellers can share product pages where buyers browse product information, compare available options, and follow an ordering process. The product brings together customer-facing storefronts and administrative tools for managing the information behind them.",
   ],
   problem: {
@@ -47,7 +47,7 @@ export const askOnceCaseStudy = {
     { title: "Shareable storefronts", description: "Public seller pages bring product browsing into a mobile-responsive customer experience." },
     { title: "Organized catalog", description: "Product and category management supports structured product discovery and administration." },
     { title: "Variations & stock", description: "Product details include available options and stock information to support customer selection." },
-    { title: "Cart & ordering", description: "Customer product selection, cart, and checkout / order submission form the ordering workflow." },
+    { title: "Cart & ordering", description: "Customer product selection, cart, checkout, and order submission form the ordering workflow." },
     { title: "Administrative workflows", description: "Shop and product management are supported by authentication and role-based access control." },
   ],
   stack: [
@@ -56,7 +56,7 @@ export const askOnceCaseStudy = {
     { category: "Supporting Technologies", items: ["AWS S3", "Git", "GitHub", "Vercel"] },
   ] satisfies readonly SkillGroup[],
   architecture: [
-    { title: "Public customer experience", description: "Seller storefronts, product listings and detail pages, cart, and checkout / order submission make up the public interface." },
+    { title: "Public customer experience", description: "Seller storefronts, product listings and detail pages, cart, checkout, and order submission make up the public interface." },
     { title: "Administrative experience", description: "Shop, product, and category management cover administrative workflows, including product variants, stock handling, and administrative access control." },
     { title: "Backend & data", description: "Server-side API endpoints, input validation, authentication and authorization, and MongoDB models and database operations support application functionality. The known stack includes Zod, Mongoose, and MongoDB Atlas." },
     { title: "Deployment & development", description: "The Next.js application is deployed through Vercel. Development and staging workflows are relevant to release preparation; specific environment configuration and release automation are not documented in this case study." },
