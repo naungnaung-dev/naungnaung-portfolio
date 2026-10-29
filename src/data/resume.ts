@@ -2,6 +2,7 @@ import { education } from "@/data/education";
 import { experience, previousExperience } from "@/data/experience";
 import { profile } from "@/data/profile";
 import { projects } from "@/data/projects";
+import { siteConfig } from "@/config/site";
 
 interface ResumeLink {
   label: string;
@@ -64,6 +65,11 @@ export const resume = {
     nationality: profile.nationality,
     email: "naungnaung.code@gmail.com",
     links: [
+      {
+        label: "Portfolio",
+        href: siteConfig.url,
+        displayText: "naungnaung.vercel.app",
+      },
       {
         label: "GitHub",
         href: profile.links.github,

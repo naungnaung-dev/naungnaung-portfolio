@@ -13,6 +13,8 @@ teams.
 - Lucide React
 - Vercel as the intended deployment platform
 
+Production: [naungnaung.vercel.app](https://naungnaung.vercel.app)
+
 ## Implemented content
 
 The homepage includes Hero, About, Technical Skills, Professional Experience,
@@ -22,7 +24,8 @@ screenshots.
 
 The approved two-page resume is stored at
 `public/Naung_Naung_Full_Stack_Developer_Resume.pdf`. Download actions are
-available in the Hero and Contact sections.
+available in the Hero and Contact sections. Its contact header includes the
+confirmed production portfolio URL.
 
 ## Local development
 
@@ -69,8 +72,8 @@ text/link verification before replacing the approved public file.
 
 ## Deployment status
 
-The project is prepared for deployment to a new, separate Vercel portfolio
-project, but it is not yet publicly deployed. The production domain, canonical
-URLs, sitemap, robots metadata, and social-preview images will be configured
-after the final production URL is confirmed. This repository is separate from
-the AskOnce application and its Vercel projects.
+The portfolio is deployed to Vercel at
+[naungnaung.vercel.app](https://naungnaung.vercel.app). Canonical metadata,
+robots directives, the sitemap, and social-preview metadata use this confirmed
+production URL. This repository and deployment remain separate from the
+AskOnce application and its Vercel projects.

@@ -174,3 +174,28 @@ There are no confirmed build, dependency, routing, asset, resume, credential, or
 | Lighthouse | Not tested | Requires a controllable browser or deployed preview |
 
 The production build needed execution outside the restricted sandbox so Turbopack could create its local worker and `next/font/google` could reach the font provider. The build then passed; this was an audit-environment restriction, not an application defect.
+
+## Post-deployment SEO and resume update
+
+Update date: October 29, 2026
+
+**Verified locally in a production build**
+
+- Centralized the confirmed production URL, `https://naungnaung.vercel.app`, for metadata, robots, sitemap, and resume data.
+- Added homepage and AskOnce case-study canonical metadata.
+- Added absolute Open Graph and Twitter metadata using a 1200 × 630 generated PNG social card.
+- Added static `/robots.txt`, `/sitemap.xml`, and `/opengraph-image` routes.
+- The sitemap contains only `/` and `/projects/askonce`; no fabricated modification dates were added.
+- Regenerated the resume with a clickable portfolio link while preserving two A4 pages, embedded Arial, selectable text, and five expected hyperlinks.
+- TypeScript, ESLint, a clean Turbopack production build, local route responses, metadata assertions, and PDF-serving checks passed.
+
+**Verified against the current production deployment before publishing these changes**
+
+- The homepage, AskOnce case study, and resume PDF return HTTP 200.
+- The resume is served as `application/pdf`.
+- `/robots.txt` and `/sitemap.xml` return HTTP 404 because the new metadata routes have not yet been committed and deployed. This is expected and must be rechecked after the next production deployment.
+
+**Still not tested**
+
+- Browser viewport, keyboard, screen-reader, contrast, and Lighthouse checks remain manual because Chrome computer-use permissions were unavailable.
+- Production canonical tags, generated social image, robots, sitemap, and updated resume must be verified again after the unpublished changes reach Vercel.

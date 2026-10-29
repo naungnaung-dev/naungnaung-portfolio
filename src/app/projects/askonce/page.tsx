@@ -6,21 +6,33 @@ import { askOnceCaseStudy as study } from "@/data/askonce-case-study";
 import { profile } from "@/data/profile";
 import { askOnceScreenshots } from "@/data/askonce-screenshots";
 import { ScreenshotGallery } from "@/components/case-study/screenshot-gallery";
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: study.title,
   description: study.description,
+  alternates: { canonical: "/projects/askonce" },
   openGraph: {
     title: `${study.title} | ${profile.name}`,
     description: study.description,
     type: "article",
     locale: "en_US",
     siteName: `${profile.name} — Portfolio`,
+    url: "/projects/askonce",
+    images: [
+      {
+        url: siteConfig.socialImage,
+        width: 1200,
+        height: 630,
+        alt: `${profile.name}, ${profile.title}`,
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: `${study.title} | ${profile.name}`,
     description: study.description,
+    images: [siteConfig.socialImage],
   },
 };
 
